@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da Cobrinha</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="style,css" />
+</head>
+<body>
+    <div class="initial-menu">
+        <h1>Bem-vindo ao Jogo da Cobrinha!</h1>
+        <label for="nickname">Digite seu nome:</label>
+        <input type="text" id="nickname" placeholder="Digite seu nome..." required aria-required="true" />
+        <p class="error_text" style="display:none;">Este campo não pode ficar em branco.</p>
+
+        <label for="difficulty" class="difficulty-label">Selecione a Dificuldade:</label>
+        <select id="difficulty" class="difficulty-game" required aria-required="true">
+            <option value="not" disabled selected>Selecione a Dificuldade</option>
+            <option value="easy">Fácil</option>
+            <option value="normal">Médio</option>
+            <option value="hard">Difícil</option>
+        </select>
+
+        <button class="init_game">Jogar</button>
+    </div>
+
+    <header>
+      <h1>Nome: <span class="nickname_player"></span></h1>
+      <div class="Pontuação"><span class="score__value">00</span></div>
+      <div class="high-score">Recorde: <span class="high-score-value">00</span></div>
+    </header>
+    
+    <div class="menu-screen">
+      <span class="Perdeu">Perdeu</span>
+      <span class="Pontuação final">Pontuação Final <span class="score_game_over"> 00</span></span>
+      <button class="btn-play">
+        <span class="material-symbols-outlined"> play_circle </span>
+        Jogar novamente
+      </button>
+      <button class="btn-home">Voltar ao Início</button> 
+    </div>
+    
+
+    <canvas></canvas>
+    <script src="SnakeGame.java"></script>
+</body>
+</html>
